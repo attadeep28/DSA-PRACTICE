@@ -29,7 +29,7 @@ bool subsetSumToK(int ind, vector<int> &arr, int k, vector<vector<int>> &dp)
 }
 int main()
 {
-    vector<int> arr = {1,2,3,4};
+    vector<int> arr = {1, 2, 3, 4};
     int k = 4;
     int n = arr.size();
     vector<vector<int>> dp1(n, vector<int>(k + 1, -1));
