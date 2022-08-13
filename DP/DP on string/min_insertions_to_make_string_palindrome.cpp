@@ -10,7 +10,7 @@ A Palindrome String is one that reads the same backward as well as forward.
 
 sol :
     step 1: find longest palindromic string in s
-    step 2: number of insertion required will be 
+    step 2: number of insertion required will be
         (length of string - longest palindromic string in s)
 
 */
