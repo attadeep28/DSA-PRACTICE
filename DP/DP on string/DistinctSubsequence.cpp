@@ -49,6 +49,9 @@ public:
     }
 };
 int main()
-{
+{   
+    string s = "rabbbit", t = "rabbit";
+    Solution sol;
+    cout << sol.numDistinct(s,t) << endl;
     return 0;
 }
