@@ -31,6 +31,17 @@ int main()
     int n = matrix.size();
     int m = matrix[0].size();
 
+    int ans = INT_MIN;
+    // MEMOIZATION
+    vector<vector<int>> dp1(n, vector<int>(m, -1));
+    for (int i = 0; i < m; i++)
+    {
+        ans = max(ans, f(n - 1, i, matrix, dp1));
+    }
+
+    cout << ans << endl;
+
+    // TABULATION
     vector<vector<int>> dp(n, vector<int>(m, 0));
 
     // Initializing first row - base condition
