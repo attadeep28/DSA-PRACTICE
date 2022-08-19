@@ -30,6 +30,17 @@ int main()
     {
         dp1[i] = dp1[i - 1] + dp1[i - 2];
     }
-    cout << dp1[N];
+    cout << dp1[N] << endl;
+
+    // Space Optimaization
+    int prev1 = 1, prev2 = 1, cur;
+    for (int i = 2; i <= N; i++)
+    {
+        cur = prev1 + prev2;
+        prev2 = prev1;
+        prev1 = cur;
+    }
+    cout << prev1 << endl;
+
     return 0;
 }
