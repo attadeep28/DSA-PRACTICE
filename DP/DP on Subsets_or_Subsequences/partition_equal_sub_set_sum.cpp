@@ -2,7 +2,8 @@
 using namespace std;
 /*
 https://leetcode.com/problems/partition-equal-subset-sum/
-Given a non-empty array nums containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.
+Given a non-empty array nums containing only positive integers, find if the array can be partitioned into two subsets
+such that the sum of elements in both subsets is equal.
 
 Input: nums = [1,5,11,5]
 Output: true

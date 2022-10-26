@@ -20,7 +20,7 @@ int main()
 
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
-    vector<int> distTo(V + 1, INT_MAX); // 1-indexed array for calculating shortest paths;
+    vector<int> distTo(V + 1, INT_MAX),path(V+1); // 1-indexed array for calculating shortest paths;
     distTo[src] = 0;
 
     pq.push({0, src});
@@ -32,11 +32,13 @@ int main()
         pq.pop();
 
         for (auto it : adj[node])
-        {
-            if (distTo[it.first] > dis + it.second)
-            {
-                distTo[it.first] = dis + it.second;
-                pq.push({distTo[it.first], it.first});
+        {   
+            int adjNode = it.first;
+            int edjWt = it.second;
+            if (distTo[adjNode] > dis + edjWt)
+            {   
+                distTo[adjNode] = dis + edjWt;
+                pq.push({distTo[adjNode], adjNode});
             }
         }
     }
