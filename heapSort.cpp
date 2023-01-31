@@ -20,7 +20,7 @@ void heapify(int arr[], int n, int i)
 
 void buildHeap(int arr[], int n)
 {
-    for (int i = n / 2; i >= 0; i--)
+    for (int i = n / 2 - 1; i >= 0; i--)
     {
         heapify(arr, n, i);
     }
@@ -29,10 +29,10 @@ void buildHeap(int arr[], int n)
 void heapSort(int arr[], int n)
 {
     buildHeap(arr, n);
-    for (int i = n-1; i > 1; i--)
+    for (int i = n-1; i > 0; i--)
     {
-        swap(arr[i], arr[1]);
-        heapify(arr, i - 1, 1);
+        swap(arr[i], arr[0]);
+        heapify(arr, i , 0);
     }
 
     cout << endl;
